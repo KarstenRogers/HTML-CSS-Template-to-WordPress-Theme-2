@@ -13,21 +13,27 @@
 
 get_header(); ?>
 
-<?php 
-if ( has_post_thumbnail() ) {
-	$bg_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
-}
+<?php $bg_img = dwp_option('dwp_banner_img', false,  'url');
+$bg_url = '';
+ if ($bg_img != '') {
+		$bg_url = "background-image: url('" . $bg_img . "');";
+ }
+	
 ?>
 
-<div class="pagewrap" style="background-image: url('<?php echo $bg_url[0]; ?>');">
-		<header>
-			<?php the_title( '<h1 class="entry-title">', '</h1>');?>
-	</header>	    
-</div><!-- /pagewrap -->
+<div class="pagewrap" style="<?php echo $bg_url; ?>">
+	<header>
+		<?php if (dwp_option('hp-banner-title', 'Header Text') != '') {
+			echo '<h1>';
+			echo dwp_option('hp-banner-title');
+			echo '</h1>';
+		} ?>
+		</header>
+	</div>		
 
 <div class="container">
 <div class="row">
-	<div id="primary" class="col-lg-9 col-md-9">
+	<div id="primary" class="col-lg-8 col-md-8">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>

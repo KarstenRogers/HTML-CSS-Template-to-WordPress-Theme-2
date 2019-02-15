@@ -242,5 +242,7 @@ require get_template_directory() . '/inc/plugin-activation.php';
  */
 require get_template_directory() . '/inc/meta-box.php';
 
-
-
+/**
+ * Meta Boxes
+ */
+require get_template_directory() . '/inc/theme-options.php';
