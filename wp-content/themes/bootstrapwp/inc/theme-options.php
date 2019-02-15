@@ -689,6 +689,14 @@
                 'url'   => true,
             ),
 
+            array( 
+              'title'     => __( 'Portfolio Title', 'diamondwp' ),
+              'subtitle'  => __( 'title text for the portfolio module', 'diamondwp' ),
+              'id'        => 'portfolio-title',
+              'default'   => 'WE CREATE COOL STUFF',
+              'type'      => 'text',
+          ),
+
                   )
               );
                
