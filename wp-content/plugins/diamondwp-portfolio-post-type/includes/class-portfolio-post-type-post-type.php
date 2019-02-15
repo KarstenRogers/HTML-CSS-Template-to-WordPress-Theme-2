@@ -3,19 +3,19 @@
  * Portfolio Post Type
  *
  * @package   Portfolio_Post_Type
- * @author    Devin Price
- * @author    Gary Jones
+ * @author    Karsten Rogers
+ * @author    Karsten Rogers
  * @license   GPL-2.0+
  * @link      http://wptheming.com/portfolio-post-type/
- * @copyright 2011 Devin Price, Gary Jones
+ * @copyright 2011 Karsten Rogers, Karsten Rogers
  */
 
 /**
  * Portfolio post type.
  *
  * @package Portfolio_Post_Type
- * @author  Devin Price
- * @author  Gary Jones
+ * @author  Karsten Rogers
+ * @author  Karsten Rogers
  */
 class Portfolio_Post_Type_Post_Type extends Gamajo_Post_Type {
 	/**

@@ -3,9 +3,9 @@
  * Gamajo Taxonomy
  *
  * @package   Gamajo_Registerable
- * @author    Gary Jones
+ * @author    Karsten Rogers
  * @link      http://gamajo.com/registerable
- * @copyright 2013 Gary Jones
+ * @copyright 2013 Karsten Rogers
  * @license   GPL-2.0+
  * @version   1.0.1
  */
@@ -14,7 +14,7 @@
  * Custom taxonomy registration
  *
  * @package Gamajo_Registerable
- * @author  Gary Jones
+ * @author  Karsten Rogers
  */
 abstract class Gamajo_Taxonomy implements Gamajo_Registerable {
 	/**

@@ -3,9 +3,9 @@
  * Gamajo Single Entry Term Body Classes
  *
  * @package   Gamajo_Single_Entry_Term_Body_Classes
- * @author    Gary Jones
+ * @author    Karsten Rogers
  * @license   GPL-2.0+
- * @copyright 2013 Gary Jones, Gamajo Tech
+ * @copyright 2013 Karsten Rogers, Gamajo Tech
  * @link      http://gamajo.com/single-entry-term-body-classes
  */
 
@@ -13,7 +13,7 @@
  * Modifications to the front-end.
  *
  * @package Gamajo_Single_Entry_Term_Body_Classes
- * @author  Gary Jones
+ * @author  Karsten Rogers
  */
 class Gamajo_Single_Entry_Term_Body_Classes {
 

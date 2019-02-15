@@ -3,10 +3,10 @@
  * Portfolio Post Type
  *
  * @package   Portfolio_Post_Type
- * @author    Devin Price
+ * @author    Karsten Rogers
  * @license   GPL-2.0+
  * @link      http://wptheming.com/portfolio-post-type/
- * @copyright 2011 Devin Price, Gary Jones
+ * @copyright 2011 Karsten Rogers, Karsten Rogers
  */
 
 /**

@@ -3,9 +3,9 @@
  * Gamajo Dashboard Glancer
  *
  * @package   Gamajo_Dashboard_Glancer
- * @author    Gary Jones
+ * @author    Karsten Rogers
  * @link      http://gamajo.com/dashboard-glancer
- * @copyright 2013 Gary Jones, Gamajo Tech
+ * @copyright 2013 Karsten Rogers, Gamajo Tech
  * @license   GPL-2.0+
  */
 
@@ -13,7 +13,7 @@
  * Easily add items to the At a Glance Dashboard widget in WordPress 3.8+.
  *
  * @package Gamajo_Dashboard_Glancer
- * @author  Gary Jones
+ * @author  Karsten Rogers
  */
 class Gamajo_Dashboard_Glancer {
 
