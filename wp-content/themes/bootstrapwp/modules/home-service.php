@@ -9,7 +9,7 @@ get_header(); ?>
 
 <!-- ==== HEADERWRAP ==== -->
 <div class="pagewrap">
-			<header>
+			<header> 
 	  		 		<h1>Our Services</h1>
 	  		</header>	    
 	    </div><!-- /headerwrap -->
