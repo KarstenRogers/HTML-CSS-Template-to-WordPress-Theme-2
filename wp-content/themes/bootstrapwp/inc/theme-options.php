@@ -690,6 +690,24 @@
             ),
 
             array( 
+              'title'     => __( 'Divider 2 Content', 'diamondwp' ),
+              'subtitle'  => __( 'Text for divider 2', 'diamondwp' ),
+              'id'        => 'd2-content',
+              'default'   => '<h1> DESIGN SOLVE PROBLEMS</h1>
+                              <hr>
+                              <p> From he purely practical to the richly...',
+              'type'      => 'textarea',
+          ),
+
+          array( 
+            'title'     => __( 'Divider 2 Image', 'diamondwp' ),
+            'subtitle'  => __( 'Image for Divider 2', 'diamondwp' ),
+            'id'        => 'd2-img',
+            'type'      => 'media',
+            'url'   => true,
+        ),
+
+            array( 
               'title'     => __( 'Portfolio Title', 'diamondwp' ),
               'subtitle'  => __( 'title text for the portfolio module', 'diamondwp' ),
               'id'        => 'portfolio-title',
