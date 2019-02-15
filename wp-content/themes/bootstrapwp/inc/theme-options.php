@@ -506,20 +506,20 @@
                   'icon'      => 'el-icon-photo',
                   'title'     => __('Footer', 'diamondwp'),
                   'fields'    => array(
-                      array( 
-                          'title'     => __( 'Custom Copyright', 'diamondwp' ),
-                          'subtitle'  => __( 'Add your own custom text/html for copyright region.', 'diamondwp' ),
-                          'id'        => 'custom_copyright',
-                          'default'   => '&copy; Copyright 2014 - <a href="https://diamondwp.com">diamondwp.com</a>',
-                          'type'      => 'editor',
-                      ),
+                    array( 
+                      'title'     => __( 'Footer Title Text', 'diamondwp' ),
+                      'subtitle'  => __( 'Add the text above footer widgets', 'diamondwp' ),
+                      'id'        => 'footer-titile',
+                      'default'   => 'THANKS FOR VISITING',
+                      'type'      => 'text',
+                  ),
 
                       array( 
-                          'title'     => __( 'Custom Powered By Text', 'diamondwp' ),
-                          'subtitle'  => __( 'Add your own custom text/html for powered by region.', 'diamondwp' ),
-                          'id'        => 'custom_power',
-                          'default'   => 'Powered by <a href="https://diamondwp.com">diamondwp</a>',
-                          'type'      => 'editor',
+                          'title'     => __( 'Custom Copyright', 'diamondwp' ),
+                          'subtitle'  => __( 'Add your own custom text/html for copyright region', 'diamondwp' ),
+                          'id'        => 'custom-copyright',
+                          'default'   => 'THANKS FOR VISITING',
+                          'type'      => 'textarea',
                       ),
                   )
               );

@@ -14,8 +14,11 @@
 
 		<div class="container footer-section">
 			<div class="row">
-				<h1 class="centered" style="text-align: center;">THANKS FOR VISITING</h1>
-				<hr>
+				<?php if (dwp_option('footer-title') != '') {
+        echo '<h1 class="centered">';
+        echo dwp_option('footer-title');
+        echo '</h1><hr>';
+      	}?>
 			<div class="col-lg-4">
 			<?php dynamic_sidebar( 'footer-1' ); ?>
 			</div>
@@ -30,7 +33,11 @@
 
 	<div class="footerwrap">
 			<div class="container">
+				<?php if (dwp_option('custom-copyright') != '') {
+					echo dwp_option('custom-copyright');
+				} else { ?>
 				<h4 style="text-align: center;">Created by <a href="http://braginteractive.com">Brad Williams</a> - &copy; <?php _e('Copyright', 'bootstrapwp'); ?> <?php echo date('Y'); ?></h4>
+				<?php } ?>
 			</div>
 		</div>
 </footer><!-- #colophon -->
