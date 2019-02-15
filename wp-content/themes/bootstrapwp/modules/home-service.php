@@ -7,6 +7,18 @@
 
 get_header(); ?>
 
+<?php $bg_img = rwmb_meta('dwp_banner_image', 'type=image');
+
+$bg_url = '';
+
+if (count($bg_img) > '0' ) {
+	foreach ($bg_img as $img) {
+		$bg = "{$img['full_url']}";
+		$bg_url = "background-image: url('" . $bg . "');";
+	}
+}
+?>
+
 <!-- ==== HEADERWRAP ==== -->
 <div class="pagewrap">
 			<header> 
@@ -62,7 +74,7 @@ get_header(); ?>
 						<i class="fa fa-group"></i>
 						<h2>Crafted with Love</h2>
 						<p>We don't make sites, we craft themes with love & passion. That is our most valued secret. We only do thing that we love.   </p>
-					</div><!-- col-lg-4 -->	
+					</div><!-- col-lg-4 -->
 
 				</div>
 	
