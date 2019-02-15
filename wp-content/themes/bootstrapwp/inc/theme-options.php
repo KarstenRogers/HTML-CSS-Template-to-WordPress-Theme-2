@@ -557,7 +557,7 @@
                               ),
                               'disabled'  => array(
                                   'twocolumn'   => 'Two Column',
-                                  'heropost'      => 'Hero Post',
+                                  'divider1'      => 'Divider 1',
                                   
                               ),
                               
@@ -670,6 +670,24 @@
                     'default'   => '<p> right column content...</p>',
                     'type'      => 'editor',
                 ),
+
+                array( 
+                  'title'     => __( 'Divider 1 Content', 'diamondwp' ),
+                  'subtitle'  => __( 'Text for divider 1', 'diamondwp' ),
+                  'id'        => 'd1-content',
+                  'default'   => '<h1> DESIGN SOLVE PROBLEMS</h1>
+                                  <hr>
+                                  <p> From he purely practical to the richly...',
+                  'type'      => 'textarea',
+              ),
+
+              array( 
+                'title'     => __( 'Divider 1 Image', 'diamondwp' ),
+                'subtitle'  => __( 'Image for Divider 1', 'diamondwp' ),
+                'id'        => 'd1-img',
+                'type'      => 'media',
+                'url'   => true,
+            ),
 
                   )
               );
