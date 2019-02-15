@@ -297,8 +297,8 @@
 
                  // ACTUAL DECLARATION OF SECTIONS
                  $this->sections[] = array(
-                  'title'         => __( 'General', 'bootstrapwp' ),
-                  'heading'        => __( 'Header of this Section', 'bootstrapwp' ),
+                  'title'         => __( 'General', 'diamondwp' ),
+                  'heading'        => __( 'Header of this Section', 'diamondwp' ),
                   'desc'          => 'Description of this section',
                   'icon'          => 'el-icon-cog',
                   'submenu'       => true,
@@ -306,9 +306,9 @@
                       array(
                           'id'        => 'test_text',
                           'type'      => 'text', 
-                          'title'     => __( 'Testing Text', 'bootstrapwp' ),
-                          'default'   => 'BootstrapWP',
-                          'subtitle'  => __( 'Subtitle Here', 'bootstrapwp' ),
+                          'title'     => __( 'Testing Text', 'diamondwp' ),
+                          'default'   => 'diamondwp',
+                          'subtitle'  => __( 'Subtitle Here', 'diamondwp' ),
                       ),
                   ),
               );
@@ -316,30 +316,30 @@
               // Header
               $this->sections[] = array(
                   'icon'      => 'el-icon-website',
-                  'title'     => __('Header', 'bootstrapwp'),
+                  'title'     => __('Header', 'diamondwp'),
                   'fields'    => array(
                       array( 
-                          'title'     => __( 'Fixed Navbar', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select to enable/disable a fixed navbar.', 'bootstrapwp' ),
+                          'title'     => __( 'Fixed Navbar', 'diamondwp' ),
+                          'subtitle'  => __( 'Select to enable/disable a fixed navbar.', 'diamondwp' ),
                           'id'        => 'disable_fixed_navbar',
                           'default'   => false,
-                          'on'        => __( 'Enable', 'bootstrapwp' ),
-                          'off'       => __( 'Disable', 'bootstrapwp' ),
+                          'on'        => __( 'Enable', 'diamondwp' ),
+                          'off'       => __( 'Disable', 'diamondwp' ),
                           'type'      => 'switch',
                       ),
 
                       array( 
-                          'title'     => __( 'Inverse Navbar', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select to enable/disable an inverse navbar color.', 'bootstrapwp' ),
+                          'title'     => __( 'Inverse Navbar', 'diamondwp' ),
+                          'subtitle'  => __( 'Select to enable/disable an inverse navbar color.', 'diamondwp' ),
                           'id'        => "disable_inverse_navbar",
                           'default'   => false,
-                          'on'        => __( 'Enable', 'bootstrapwp' ),
-                          'off'       => __( 'Disable', 'bootstrapwp' ),
+                          'on'        => __( 'Enable', 'diamondwp' ),
+                          'off'       => __( 'Disable', 'diamondwp' ),
                           'type'      => 'switch',
                       ),
                       array( 
-                          'title'     => __( 'Logo', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Use this field to upload your custom logo for use in the theme header. (Recommended 200px x 40px)', 'bootstrapwp' ),
+                          'title'     => __( 'Logo', 'diamondwp' ),
+                          'subtitle'  => __( 'Use this field to upload your custom logo for use in the theme header. (Recommended 200px x 40px)', 'diamondwp' ),
                           'id'        => 'custom_logo',
                           'default'   => '',
                           'type'      => 'media',
@@ -351,39 +351,39 @@
                 //Blog              
                 $this->sections[] = array(
                   'icon'      => 'el-icon-wordpress',
-                  'title'     => __('Blog', 'bootstrapwp'),
+                  'title'     => __('Blog', 'diamondwp'),
                   'fields'    => array(
                       array( 
-                          'title'     => __( 'Display Meta Data', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select to enable/disable the date and author.', 'bootstrapwp' ),
+                          'title'     => __( 'Display Meta Data', 'diamondwp' ),
+                          'subtitle'  => __( 'Select to enable/disable the date and author.', 'diamondwp' ),
                           'id'        => 'disable_meta',
                           'default'   => true,
-                          'on'        => __( 'Enable', 'bootstrapwp' ),
-                          'off'       => __( 'Disable', 'bootstrapwp' ),
+                          'on'        => __( 'Enable', 'diamondwp' ),
+                          'off'       => __( 'Disable', 'diamondwp' ),
                           'type'      => 'switch',
                       ),
 
                       array(  
-                          'title'     => __( 'Read More Button Text', 'bootstrapwp' ),
-                          'subtitle'  => __( 'This is the text that will replace Read More.', 'bootstrapwp' ),
+                          'title'     => __( 'Read More Button Text', 'diamondwp' ),
+                          'subtitle'  => __( 'This is the text that will replace Read More.', 'diamondwp' ),
                           'id'        => 'read_more_text',
                           'default'   => 'Read More',
                           'type'      => 'text',
                       ),
 
                       array( 
-                          'title'     => __( 'Make the Read More button Full Width - Block', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Enable/Disable full width button.', 'bootstrapwp' ),
+                          'title'     => __( 'Make the Read More button Full Width - Block', 'diamondwp' ),
+                          'subtitle'  => __( 'Enable/Disable full width button.', 'diamondwp' ),
                           'id'        => 'read_more_block',
                           'default'   => true,
-                          'on'        => __( 'Enable', 'bootstrapwp' ),
-                          'off'       => __( 'Disable', 'bootstrapwp' ),
+                          'on'        => __( 'Enable', 'diamondwp' ),
+                          'off'       => __( 'Disable', 'diamondwp' ),
                           'type'      => 'switch',
                       ),
 
                       array( 
-                          'title'     => __( 'Read More Button Size', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select the Bootstrap button size you want.', 'bootstrapwp' ),
+                          'title'     => __( 'Read More Button Size', 'diamondwp' ),
+                          'subtitle'  => __( 'Select the Bootstrap button size you want.', 'diamondwp' ),
                           'id'        => 'read_more_size',
                           'default'   => 'default',
                           'type'      => 'select',
@@ -391,8 +391,8 @@
                       ),
 
                       array( 
-                          'title'     => __( 'Read More Button Color', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select the Bootstrap button color you want.', 'bootstrapwp' ),
+                          'title'     => __( 'Read More Button Color', 'diamondwp' ),
+                          'subtitle'  => __( 'Select the Bootstrap button color you want.', 'diamondwp' ),
                           'id'        => 'read_more_color',
                           'default'   => 'default',
                           'type'      => 'select',
@@ -400,12 +400,12 @@
                       ),
 
                       array( 
-                          'title'     => __( 'Display Tags', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select to enable/disable the post tags.', 'bootstrapwp' ),
+                          'title'     => __( 'Display Tags', 'diamondwp' ),
+                          'subtitle'  => __( 'Select to enable/disable the post tags.', 'diamondwp' ),
                           'id'        => 'enable_disable_tags',
                           'default'   => true,
-                          'on'        => __( 'Enable', 'bootstrapwp' ),
-                          'off'       => __( 'Disable', 'bootstrapwp' ),
+                          'on'        => __( 'Enable', 'diamondwp' ),
+                          'off'       => __( 'Disable', 'diamondwp' ),
                           'type'      => 'switch',
                       ),
                   )
@@ -414,11 +414,11 @@
               //CSS             
               $this->sections[] = array(
                   'icon'      => 'el-icon-css',
-                  'title'     => __('CSS', 'bootstrapwp'),
+                  'title'     => __('CSS', 'diamondwp'),
                   'fields'    => array(
                        array( 
-                          'title'     => __( 'Custom CSS', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Insert any custom CSS.', 'bootstrapwp' ),
+                          'title'     => __( 'Custom CSS', 'diamondwp' ),
+                          'subtitle'  => __( 'Insert any custom CSS.', 'diamondwp' ),
                           'id'        => 'custom_css',
                           'type'      => 'ace_editor',
                           'mode'      => 'css',
@@ -431,19 +431,19 @@
               //General            
               $this->sections[] = array(
                   'icon'      => 'el-icon-cog',
-                  'title'     => __('General', 'bootstrapwp'),
+                  'title'     => __('General', 'diamondwp'),
                   'fields'    => array(
                        array(   
                       'type'      => 'select',
                       'id'        => 'css_style',
-                      'title'     => __('Theme Stylesheet', 'bootstrapwp'), 
-                      'subtitle'  => __('Select your themes alternative color scheme.', 'bootstrapwp'),
+                      'title'     => __('Theme Stylesheet', 'diamondwp'), 
+                      'subtitle'  => __('Select your themes alternative color scheme.', 'diamondwp'),
                       'default'   => 'bootstrap.min.css',
                       'options'   => $styles,
                       ),
                       array( 
-                          'title'     => __( 'Favicon', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Use this field to upload your custom favicon.', 'bootstrapwp' ),
+                          'title'     => __( 'Favicon', 'diamondwp' ),
+                          'subtitle'  => __( 'Use this field to upload your custom favicon.', 'diamondwp' ),
                           'id'        => 'custom_favicon',
                           'default'   => '',
                           'type'      => 'media',
@@ -455,11 +455,11 @@
               //Portfolio            
               $this->sections[] = array(
                   'icon'      => 'el-icon-camera',
-                  'title'     => __('Portfolio', 'bootstrapwp'),
+                  'title'     => __('Portfolio', 'diamondwp'),
                   'fields'    => array(
                        array( 
-                          'title'     => __( 'Portfolio Columns', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select the number of columns you would like to use for the portfolio.', 'bootstrapwp' ),
+                          'title'     => __( 'Portfolio Columns', 'diamondwp' ),
+                          'subtitle'  => __( 'Select the number of columns you would like to use for the portfolio.', 'diamondwp' ),
                           'id'        => 'portfolio_column',
                           'type'      => 'image_select',
                           'options'   => array(
@@ -470,18 +470,18 @@
                           'default'   => '4'
                       ),
                       array( 
-                          'title'     => __( 'Display Filter', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select to enable/disable the portfolio filter.', 'bootstrapwp' ),
+                          'title'     => __( 'Display Filter', 'diamondwp' ),
+                          'subtitle'  => __( 'Select to enable/disable the portfolio filter.', 'diamondwp' ),
                           'id'        => 'filter_switch',
                           'default'   => true,
-                          'on'        => __( 'Enable', 'bootstrapwp' ),
-                          'off'       => __( 'Disable', 'bootstrapwp' ),
+                          'on'        => __( 'Enable', 'diamondwp' ),
+                          'off'       => __( 'Disable', 'diamondwp' ),
                           'type'      => 'switch',
                       ),
 
                       array( 
-                          'title'     => __( 'Filter Button Size', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select the Bootstrap button size you want for the Filter.', 'bootstrapwp' ),
+                          'title'     => __( 'Filter Button Size', 'diamondwp' ),
+                          'subtitle'  => __( 'Select the Bootstrap button size you want for the Filter.', 'diamondwp' ),
                           'id'        => 'filter_size',
                           'default'   => 'default',
                           'type'      => 'select',
@@ -490,8 +490,8 @@
                       ),
 
                       array( 
-                          'title'     => __( 'Filter Button Color', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select the Bootstrap button color you want for the filter.', 'bootstrapwp' ),
+                          'title'     => __( 'Filter Button Color', 'diamondwp' ),
+                          'subtitle'  => __( 'Select the Bootstrap button color you want for the filter.', 'diamondwp' ),
                           'id'        => 'filter_color',
                           'default'   => 'default',
                           'type'      => 'select',
@@ -504,21 +504,21 @@
               //Footer             
               $this->sections[] = array(
                   'icon'      => 'el-icon-photo',
-                  'title'     => __('Footer', 'bootstrapwp'),
+                  'title'     => __('Footer', 'diamondwp'),
                   'fields'    => array(
                       array( 
-                          'title'     => __( 'Custom Copyright', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Add your own custom text/html for copyright region.', 'bootstrapwp' ),
+                          'title'     => __( 'Custom Copyright', 'diamondwp' ),
+                          'subtitle'  => __( 'Add your own custom text/html for copyright region.', 'diamondwp' ),
                           'id'        => 'custom_copyright',
-                          'default'   => '&copy; Copyright 2014 - <a href="https://bootstrapwp.com">BootstrapWP.com</a>',
+                          'default'   => '&copy; Copyright 2014 - <a href="https://diamondwp.com">diamondwp.com</a>',
                           'type'      => 'editor',
                       ),
 
                       array( 
-                          'title'     => __( 'Custom Powered By Text', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Add your own custom text/html for powered by region.', 'bootstrapwp' ),
+                          'title'     => __( 'Custom Powered By Text', 'diamondwp' ),
+                          'subtitle'  => __( 'Add your own custom text/html for powered by region.', 'diamondwp' ),
                           'id'        => 'custom_power',
-                          'default'   => 'Powered by <a href="https://bootstrapwp.com">BootstrapWP</a>',
+                          'default'   => 'Powered by <a href="https://diamondwp.com">diamondwp</a>',
                           'type'      => 'editor',
                       ),
                   )
@@ -527,11 +527,11 @@
               //Social             
               $this->sections[] = array(
                   'icon'      => 'el-icon-torso',
-                  'title'     => __('Social', 'bootstrapwp'),
+                  'title'     => __('Social', 'diamondwp'),
                   'fields'    => array(
                        array( 
-                          'title'     => __( 'Social Icons', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Arrange your social icons. Add complete URLs to your social profiles.', 'bootstrapwp' ),
+                          'title'     => __( 'Social Icons', 'diamondwp' ),
+                          'subtitle'  => __( 'Arrange your social icons. Add complete URLs to your social profiles.', 'diamondwp' ),
                           'id'        => 'social_icons',
                           'type'      => 'sortable',
                           'options'   => $social_options,
@@ -542,21 +542,21 @@
               //Homepage                  
               $this->sections[] = array(
                   'icon'      => 'el-icon-home',
-                  'title'     => __('Homepage', 'bootstrapwp'),
+                  'title'     => __('Homepage', 'diamondwp'),
                   //'subsection' => true,
                   'fields'    => array(
                       array(
                           'id'        => 'homepage-layout',
                           'type'      => 'sorter',
-                          'title'     => __('Homepage Layout Manager', 'bootstrapwp'),
-                          'desc'      => __('Organize how you want the layout to appear on the homepage', 'bootstrapwp'),
+                          'title'     => __('Homepage Layout Manager', 'diamondwp'),
+                          'desc'      => __('Organize how you want the layout to appear on the homepage', 'diamondwp'),
                           'options'   => array(
                               'enabled'   => array(
                                   'herocontent'   => 'Hero Content',
                                   'widgets'       => 'Widgets',
                               ),
                               'disabled'  => array(
-                                  'homecontent'   => 'Home Content',
+                                  'twocolumn'   => 'Two Column',
                                   'heropost'      => 'Hero Post',
                                   
                               ),
@@ -581,18 +581,18 @@
                       ),
 
                       array( 
-                          'title'     => __( 'Featured Button', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Enable/Disable featured button.', 'bootstrapwp' ),
+                          'title'     => __( 'Featured Button', 'diamondwp' ),
+                          'subtitle'  => __( 'Enable/Disable featured button.', 'diamondwp' ),
                           'id'        => 'featured_btn',
                           'default'   => true,
-                          'on'        => __( 'Enable', 'bootstrapwp' ),
-                          'off'       => __( 'Disable', 'bootstrapwp' ),
+                          'on'        => __( 'Enable', 'diamondwp' ),
+                          'off'       => __( 'Disable', 'diamondwp' ),
                           'type'      => 'switch',
                       ),
 
                       array(  
-                          'title'     => __( 'Featured Button Text', 'bootstrapwp' ),
-                          'subtitle'  => __( 'This is the text that will replace Learn More.', 'bootstrapwp' ),
+                          'title'     => __( 'Featured Button Text', 'diamondwp' ),
+                          'subtitle'  => __( 'This is the text that will replace Learn More.', 'diamondwp' ),
                           'id'        => 'featured_btn_text',
                           'default'   => 'Learn More',
                           'type'      => 'text',
@@ -600,8 +600,8 @@
                       ),
 
                       array(  
-                          'title'     => __( 'Featured Button URL', 'bootstrapwp' ),
-                          'subtitle'  => __( 'This is the URL for the button.', 'bootstrapwp' ),
+                          'title'     => __( 'Featured Button URL', 'diamondwp' ),
+                          'subtitle'  => __( 'This is the URL for the button.', 'diamondwp' ),
                           'id'        => 'featured_btn_url',
                           'default'   => 'http://',
                           'type'      => 'text',
@@ -609,19 +609,19 @@
                       ),
 
                       array( 
-                          'title'     => __( 'Make the Featured button Full Width - Block', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Enable/Disable full width button.', 'bootstrapwp' ),
+                          'title'     => __( 'Make the Featured button Full Width - Block', 'diamondwp' ),
+                          'subtitle'  => __( 'Enable/Disable full width button.', 'diamondwp' ),
                           'id'        => 'featured_btn_block',
                           'default'   => true,
-                          'on'        => __( 'Enable', 'bootstrapwp' ),
-                          'off'       => __( 'Disable', 'bootstrapwp' ),
+                          'on'        => __( 'Enable', 'diamondwp' ),
+                          'off'       => __( 'Disable', 'diamondwp' ),
                           'type'      => 'switch',
                           'required'  => array('featured_btn','equals','1'),
                       ),
 
                       array( 
-                          'title'     => __( 'Featured Button Size', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select the Bootstrap button size you want.', 'bootstrapwp' ),
+                          'title'     => __( 'Featured Button Size', 'diamondwp' ),
+                          'subtitle'  => __( 'Select the Bootstrap button size you want.', 'diamondwp' ),
                           'id'        => 'featured_btn_size',
                           'default'   => 'default',
                           'type'      => 'select',
@@ -630,8 +630,8 @@
                       ),
 
                       array( 
-                          'title'     => __( 'Featured Button Color', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select the Bootstrap button color you want.', 'bootstrapwp' ),
+                          'title'     => __( 'Featured Button Color', 'diamondwp' ),
+                          'subtitle'  => __( 'Select the Bootstrap button color you want.', 'diamondwp' ),
                           'id'        => 'featured_btn_color',
                           'default'   => 'default',
                           'type'      => 'select',
@@ -640,12 +640,36 @@
                       ),
 
                       array( 
-                          'title'     => __( 'Right Featured Content', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Add your image or text/html for right Featured content region.', 'bootstrapwp' ),
+                          'title'     => __( 'Right Featured Content', 'diamondwp' ),
+                          'subtitle'  => __( 'Add your image or text/html for right Featured content region.', 'diamondwp' ),
                           'id'        => 'right_featured',
                           'default'   => '',
                           'type'      => 'editor',
                       ),
+
+                      array( 
+                        'title'     => __( 'Two Column Title', 'diamondwp' ),
+                        'subtitle'  => __( 'Title text for the two column module.', 'diamondwp' ),
+                        'id'        => 'tc-title',
+                        'default'   => 'A LITTLE ABOUT OUR AGENCY',
+                        'type'      => 'text',
+                    ),
+
+                    array( 
+                      'title'     => __( 'Two Column - Left', 'diamondwp' ),
+                      'subtitle'  => __( 'Text for the left column', 'diamondwp' ),
+                      'id'        => 'tc-left',
+                      'default'   => '<p> left column content...</p>',
+                      'type'      => 'editor',
+                  ),
+
+                  array( 
+                    'title'     => __( 'Two Column - Right', 'diamondwp' ),
+                    'subtitle'  => __( 'Text for the right column', 'diamondwp' ),
+                    'id'        => 'tc-right',
+                    'default'   => '<p> right column content...</p>',
+                    'type'      => 'editor',
+                ),
 
                   )
               );
