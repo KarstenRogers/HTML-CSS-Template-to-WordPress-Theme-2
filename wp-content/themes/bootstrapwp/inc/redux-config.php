@@ -105,8 +105,8 @@
             function dynamic_section( $sections ) {
                 //$sections = array();
                 $sections[] = array(
-                    'title'  => __( 'Section via hook', 'diamondwp' ),
-                    'desc'   => __( '<p class="description">This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.</p>', 'diamondwp' ),
+                    'title'  => __( 'Section via hook', 'bootstrapwp' ),
+                    'desc'   => __( '<p class="description">This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.</p>', 'bootstrapwp' ),
                     'icon'   => 'el-icon-paper-clip',
                     // Leave this as a blank section, no options just some intro text set above.
                     'fields' => array()
@@ -247,7 +247,7 @@
                 $screenshot  = $this->theme->get_screenshot();
                 $class       = $screenshot ? 'has-screenshot' : '';
 
-                $customize_title = sprintf( __( 'Customize &#8220;%s&#8221;', 'diamondwp' ), $this->theme->display( 'Name' ) );
+                $customize_title = sprintf( __( 'Customize &#8220;%s&#8221;', 'bootstrapwp' ), $this->theme->display( 'Name' ) );
 
                 ?>
                 <div id="current-theme" class="<?php echo esc_attr( $class ); ?>">
@@ -256,25 +256,25 @@
                             <a href="<?php echo wp_customize_url(); ?>" class="load-customize hide-if-no-customize"
                                title="<?php echo esc_attr( $customize_title ); ?>">
                                 <img src="<?php echo esc_url( $screenshot ); ?>"
-                                     alt="<?php esc_attr_e( 'Current theme preview', 'diamondwp' ); ?>"/>
+                                     alt="<?php esc_attr_e( 'Current theme preview', 'bootstrapwp' ); ?>"/>
                             </a>
                         <?php endif; ?>
                         <img class="hide-if-customize" src="<?php echo esc_url( $screenshot ); ?>"
-                             alt="<?php esc_attr_e( 'Current theme preview', 'diamondwp' ); ?>"/>
+                             alt="<?php esc_attr_e( 'Current theme preview', 'bootstrapwp' ); ?>"/>
                     <?php endif; ?>
 
                     <h4><?php echo $this->theme->display( 'Name' ); ?></h4>
 
                     <div>
                         <ul class="theme-info">
-                            <li><?php printf( __( 'By %s', 'diamondwp' ), $this->theme->display( 'Author' ) ); ?></li>
-                            <li><?php printf( __( 'Version %s', 'diamondwp' ), $this->theme->display( 'Version' ) ); ?></li>
-                            <li><?php echo '<strong>' . __( 'Tags', 'diamondwp' ) . ':</strong> '; ?><?php printf( $this->theme->display( 'Tags' ) ); ?></li>
+                            <li><?php printf( __( 'By %s', 'bootstrapwp' ), $this->theme->display( 'Author' ) ); ?></li>
+                            <li><?php printf( __( 'Version %s', 'bootstrapwp' ), $this->theme->display( 'Version' ) ); ?></li>
+                            <li><?php echo '<strong>' . __( 'Tags', 'bootstrapwp' ) . ':</strong> '; ?><?php printf( $this->theme->display( 'Tags' ) ); ?></li>
                         </ul>
                         <p class="theme-description"><?php echo $this->theme->display( 'Description' ); ?></p>
                         <?php
                             if ( $this->theme->parent() ) {
-                                printf( ' <p class="howto">' . __( 'This <a href="%1$s">child theme</a> requires its parent theme, %2$s.', 'diamondwp' ) . '</p>', __( 'http://codex.wordpress.org/Child_Themes', 'diamondwp' ), $this->theme->parent()->display( 'Name' ) );
+                                printf( ' <p class="howto">' . __( 'This <a href="%1$s">child theme</a> requires its parent theme, %2$s.', 'bootstrapwp' ) . '</p>', __( 'http://codex.wordpress.org/Child_Themes', 'bootstrapwp' ), $this->theme->parent()->display( 'Name' ) );
                             }
                         ?>
 
@@ -295,366 +295,369 @@
                     $sampleHTML = $wp_filesystem->get_contents( dirname( __FILE__ ) . '/info-html.html' );
                 }
 
-                 // ACTUAL DECLARATION OF SECTIONS
-                 $this->sections[] = array(
-                  'title'         => __( 'General', 'bootstrapwp' ),
-                  'heading'        => __( 'Header of this Section', 'bootstrapwp' ),
-                  'desc'          => 'Description of this section',
-                  'icon'          => 'el-icon-cog',
-                  'submenu'       => true,
-                  'fields'        => array(
-                      array(
-                          'id'        => 'test_text',
-                          'type'      => 'text', 
-                          'title'     => __( 'Testing Text', 'bootstrapwp' ),
-                          'default'   => 'BootstrapWP',
-                          'subtitle'  => __( 'Subtitle Here', 'bootstrapwp' ),
-                      ),
-                  ),
-              );
-
-              // Header
-              $this->sections[] = array(
-                  'icon'      => 'el-icon-website',
-                  'title'     => __('Header', 'bootstrapwp'),
-                  'fields'    => array(
-                      array( 
-                          'title'     => __( 'Fixed Navbar', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select to enable/disable a fixed navbar.', 'bootstrapwp' ),
-                          'id'        => 'disable_fixed_navbar',
-                          'default'   => false,
-                          'on'        => __( 'Enable', 'bootstrapwp' ),
-                          'off'       => __( 'Disable', 'bootstrapwp' ),
-                          'type'      => 'switch',
-                      ),
-
-                      array( 
-                          'title'     => __( 'Inverse Navbar', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select to enable/disable an inverse navbar color.', 'bootstrapwp' ),
-                          'id'        => "disable_inverse_navbar",
-                          'default'   => false,
-                          'on'        => __( 'Enable', 'bootstrapwp' ),
-                          'off'       => __( 'Disable', 'bootstrapwp' ),
-                          'type'      => 'switch',
-                      ),
-                      array( 
-                          'title'     => __( 'Logo', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Use this field to upload your custom logo for use in the theme header. (Recommended 200px x 40px)', 'bootstrapwp' ),
-                          'id'        => 'custom_logo',
-                          'default'   => '',
-                          'type'      => 'media',
-                          'url'       => true,
-                      ),
-                  )
-              );
-
-                //Blog              
+                // ACTUAL DECLARATION OF SECTIONS
                 $this->sections[] = array(
-                  'icon'      => 'el-icon-wordpress',
-                  'title'     => __('Blog', 'bootstrapwp'),
-                  'fields'    => array(
-                      array( 
-                          'title'     => __( 'Display Meta Data', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select to enable/disable the date and author.', 'bootstrapwp' ),
-                          'id'        => 'disable_meta',
-                          'default'   => true,
-                          'on'        => __( 'Enable', 'bootstrapwp' ),
-                          'off'       => __( 'Disable', 'bootstrapwp' ),
-                          'type'      => 'switch',
-                      ),
+                    'title'         => __( 'General', 'bootstrapwp' ),
+                    'heading'        => __( 'Header of this Section', 'bootstrapwp' ),
+                    'desc'          => 'Description of this section',
+                    'icon'          => 'el-icon-cog',
+                    'submenu'       => true,
+                    'fields'        => array(
+                        array(
+                            'id'        => 'test_text',
+                            'type'      => 'text', 
+                            'title'     => __( 'Testing Text', 'bootstrapwp' ),
+                            'default'   => 'BootstrapWP',
+                            'subtitle'  => __( 'Subtitle Here', 'bootstrapwp' ),
+                        ),
+                    ),
+                );
 
-                      array(  
-                          'title'     => __( 'Read More Button Text', 'bootstrapwp' ),
-                          'subtitle'  => __( 'This is the text that will replace Read More.', 'bootstrapwp' ),
-                          'id'        => 'read_more_text',
-                          'default'   => 'Read More',
-                          'type'      => 'text',
-                      ),
+                // Header
+                $this->sections[] = array(
+                    'icon'      => 'el-icon-website',
+                    'title'     => __('Header', 'bootstrapwp'),
+                    'fields'    => array(
+                        array( 
+                            'title'     => __( 'Fixed Navbar', 'bootstrapwp' ),
+                            'subtitle'  => __( 'Select to enable/disable a fixed navbar.', 'bootstrapwp' ),
+                            'id'        => 'disable_fixed_navbar',
+                            'default'   => false,
+                            'on'        => __( 'Enable', 'bootstrapwp' ),
+                            'off'       => __( 'Disable', 'bootstrapwp' ),
+                            'type'      => 'switch',
+                        ),
 
-                      array( 
-                          'title'     => __( 'Make the Read More button Full Width - Block', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Enable/Disable full width button.', 'bootstrapwp' ),
-                          'id'        => 'read_more_block',
-                          'default'   => true,
-                          'on'        => __( 'Enable', 'bootstrapwp' ),
-                          'off'       => __( 'Disable', 'bootstrapwp' ),
-                          'type'      => 'switch',
-                      ),
+                        array( 
+                            'title'     => __( 'Inverse Navbar', 'bootstrapwp' ),
+                            'subtitle'  => __( 'Select to enable/disable an inverse navbar color.', 'bootstrapwp' ),
+                            'id'        => "disable_inverse_navbar",
+                            'default'   => false,
+                            'on'        => __( 'Enable', 'bootstrapwp' ),
+                            'off'       => __( 'Disable', 'bootstrapwp' ),
+                            'type'      => 'switch',
+                        ),
+                        array( 
+                            'title'     => __( 'Logo', 'bootstrapwp' ),
+                            'subtitle'  => __( 'Use this field to upload your custom logo for use in the theme header. (Recommended 200px x 40px)', 'bootstrapwp' ),
+                            'id'        => 'custom_logo',
+                            'default'   => '',
+                            'type'      => 'media',
+                            'url'       => true,
+                        ),
+                    )
+                );
 
-                      array( 
-                          'title'     => __( 'Read More Button Size', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select the Bootstrap button size you want.', 'bootstrapwp' ),
-                          'id'        => 'read_more_size',
-                          'default'   => 'default',
-                          'type'      => 'select',
-                          'options'   => $btn_size,
-                      ),
+                  //Blog              
+                  $this->sections[] = array(
+                    'icon'      => 'el-icon-wordpress',
+                    'title'     => __('Blog', 'bootstrapwp'),
+                    'fields'    => array(
+                        array( 
+                            'title'     => __( 'Display Meta Data', 'bootstrapwp' ),
+                            'subtitle'  => __( 'Select to enable/disable the date and author.', 'bootstrapwp' ),
+                            'id'        => 'disable_meta',
+                            'default'   => true,
+                            'on'        => __( 'Enable', 'bootstrapwp' ),
+                            'off'       => __( 'Disable', 'bootstrapwp' ),
+                            'type'      => 'switch',
+                        ),
 
-                      array( 
-                          'title'     => __( 'Read More Button Color', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select the Bootstrap button color you want.', 'bootstrapwp' ),
-                          'id'        => 'read_more_color',
-                          'default'   => 'default',
-                          'type'      => 'select',
-                          'options'   => $btn_color,
-                      ),
+                        array(  
+                            'title'     => __( 'Read More Button Text', 'bootstrapwp' ),
+                            'subtitle'  => __( 'This is the text that will replace Read More.', 'bootstrapwp' ),
+                            'id'        => 'read_more_text',
+                            'default'   => 'Read More',
+                            'type'      => 'text',
+                        ),
 
-                      array( 
-                          'title'     => __( 'Display Tags', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select to enable/disable the post tags.', 'bootstrapwp' ),
-                          'id'        => 'enable_disable_tags',
-                          'default'   => true,
-                          'on'        => __( 'Enable', 'bootstrapwp' ),
-                          'off'       => __( 'Disable', 'bootstrapwp' ),
-                          'type'      => 'switch',
-                      ),
-                  )
-              );
+                        array( 
+                            'title'     => __( 'Make the Read More button Full Width - Block', 'bootstrapwp' ),
+                            'subtitle'  => __( 'Enable/Disable full width button.', 'bootstrapwp' ),
+                            'id'        => 'read_more_block',
+                            'default'   => true,
+                            'on'        => __( 'Enable', 'bootstrapwp' ),
+                            'off'       => __( 'Disable', 'bootstrapwp' ),
+                            'type'      => 'switch',
+                        ),
 
-              //CSS             
-              $this->sections[] = array(
-                  'icon'      => 'el-icon-css',
-                  'title'     => __('CSS', 'bootstrapwp'),
-                  'fields'    => array(
-                       array( 
-                          'title'     => __( 'Custom CSS', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Insert any custom CSS.', 'bootstrapwp' ),
-                          'id'        => 'custom_css',
-                          'type'      => 'ace_editor',
-                          'mode'      => 'css',
-                          'theme'     => 'monokai',
-                      ),
-                  )
-              ); 
-              
+                        array( 
+                            'title'     => __( 'Read More Button Size', 'bootstrapwp' ),
+                            'subtitle'  => __( 'Select the Bootstrap button size you want.', 'bootstrapwp' ),
+                            'id'        => 'read_more_size',
+                            'default'   => 'default',
+                            'type'      => 'select',
+                            'options'   => $btn_size,
+                        ),
 
-              //General            
-              $this->sections[] = array(
-                  'icon'      => 'el-icon-cog',
-                  'title'     => __('General', 'bootstrapwp'),
-                  'fields'    => array(
-                       array(   
-                      'type'      => 'select',
-                      'id'        => 'css_style',
-                      'title'     => __('Theme Stylesheet', 'bootstrapwp'), 
-                      'subtitle'  => __('Select your themes alternative color scheme.', 'bootstrapwp'),
-                      'default'   => 'bootstrap.min.css',
-                      'options'   => $styles,
-                      ),
-                      array( 
-                          'title'     => __( 'Favicon', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Use this field to upload your custom favicon.', 'bootstrapwp' ),
-                          'id'        => 'custom_favicon',
-                          'default'   => '',
-                          'type'      => 'media',
-                          'url'       => true,
-                      ),
-                  )
-              ); 
+                        array( 
+                            'title'     => __( 'Read More Button Color', 'bootstrapwp' ),
+                            'subtitle'  => __( 'Select the Bootstrap button color you want.', 'bootstrapwp' ),
+                            'id'        => 'read_more_color',
+                            'default'   => 'default',
+                            'type'      => 'select',
+                            'options'   => $btn_color,
+                        ),
 
-              //Portfolio            
-              $this->sections[] = array(
-                  'icon'      => 'el-icon-camera',
-                  'title'     => __('Portfolio', 'bootstrapwp'),
-                  'fields'    => array(
-                       array( 
-                          'title'     => __( 'Portfolio Columns', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select the number of columns you would like to use for the portfolio.', 'bootstrapwp' ),
-                          'id'        => 'portfolio_column',
-                          'type'      => 'image_select',
-                          'options'   => array(
-                              '6' => array('alt' => '2 Column',  'img' => ReduxFramework::$_url . 'assets/img/2-col-portfolio.png'),
-                              '4' => array('alt' => '3 Column',  'img' => ReduxFramework::$_url . 'assets/img/3-col-portfolio.png'),
-                              '3' => array('alt' => '4 Column',  'img' => ReduxFramework::$_url . 'assets/img/4-col-portfolio.png'),
-                          ),
-                          'default'   => '4'
-                      ),
-                      array( 
-                          'title'     => __( 'Display Filter', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select to enable/disable the portfolio filter.', 'bootstrapwp' ),
-                          'id'        => 'filter_switch',
-                          'default'   => true,
-                          'on'        => __( 'Enable', 'bootstrapwp' ),
-                          'off'       => __( 'Disable', 'bootstrapwp' ),
-                          'type'      => 'switch',
-                      ),
+                        array( 
+                            'title'     => __( 'Display Tags', 'bootstrapwp' ),
+                            'subtitle'  => __( 'Select to enable/disable the post tags.', 'bootstrapwp' ),
+                            'id'        => 'enable_disable_tags',
+                            'default'   => true,
+                            'on'        => __( 'Enable', 'bootstrapwp' ),
+                            'off'       => __( 'Disable', 'bootstrapwp' ),
+                            'type'      => 'switch',
+                        ),
+                    )
+                );
 
-                      array( 
-                          'title'     => __( 'Filter Button Size', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select the Bootstrap button size you want for the Filter.', 'bootstrapwp' ),
-                          'id'        => 'filter_size',
-                          'default'   => 'default',
-                          'type'      => 'select',
-                          'options'   => $btn_size,
-                          'required'  => array('filter_switch','equals','1')
-                      ),
+                //CSS             
+                $this->sections[] = array(
+                    'icon'      => 'el-icon-css',
+                    'title'     => __('CSS', 'bootstrapwp'),
+                    'fields'    => array(
+                         array( 
+                            'title'     => __( 'Custom CSS', 'bootstrapwp' ),
+                            'subtitle'  => __( 'Insert any custom CSS.', 'bootstrapwp' ),
+                            'id'        => 'custom_css',
+                            'type'      => 'ace_editor',
+                            'mode'      => 'css',
+                            'theme'     => 'monokai',
+                        ),
+                    )
+                ); 
+                
 
-                      array( 
-                          'title'     => __( 'Filter Button Color', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select the Bootstrap button color you want for the filter.', 'bootstrapwp' ),
-                          'id'        => 'filter_color',
-                          'default'   => 'default',
-                          'type'      => 'select',
-                          'options'   => $btn_color,
-                          'required'  => array('filter_switch','equals','1')
-                      ),
-                  )
-              );
+                //General            
+                $this->sections[] = array(
+                    'icon'      => 'el-icon-cog',
+                    'title'     => __('General', 'bootstrapwp'),
+                    'fields'    => array(
+                         array(   
+                        'type'      => 'select',
+                        'id'        => 'css_style',
+                        'title'     => __('Theme Stylesheet', 'bootstrapwp'), 
+                        'subtitle'  => __('Select your themes alternative color scheme.', 'bootstrapwp'),
+                        'default'   => 'bootstrap.min.css',
+                        'options'   => $styles,
+                        ),
+                        array( 
+                            'title'     => __( 'Favicon', 'bootstrapwp' ),
+                            'subtitle'  => __( 'Use this field to upload your custom favicon.', 'bootstrapwp' ),
+                            'id'        => 'custom_favicon',
+                            'default'   => '',
+                            'type'      => 'media',
+                            'url'       => true,
+                        ),
+                    )
+                ); 
 
-              //Footer             
-              $this->sections[] = array(
-                  'icon'      => 'el-icon-photo',
-                  'title'     => __('Footer', 'bootstrapwp'),
-                  'fields'    => array(
-                      array( 
-                          'title'     => __( 'Custom Copyright', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Add your own custom text/html for copyright region.', 'bootstrapwp' ),
-                          'id'        => 'custom_copyright',
-                          'default'   => '&copy; Copyright 2014 - <a href="https://bootstrapwp.com">BootstrapWP.com</a>',
-                          'type'      => 'editor',
-                      ),
+                //Portfolio            
+                $this->sections[] = array(
+                    'icon'      => 'el-icon-camera',
+                    'title'     => __('Portfolio', 'bootstrapwp'),
+                    'fields'    => array(
+                         array( 
+                            'title'     => __( 'Portfolio Columns', 'bootstrapwp' ),
+                            'subtitle'  => __( 'Select the number of columns you would like to use for the portfolio.', 'bootstrapwp' ),
+                            'id'        => 'portfolio_column',
+                            'type'      => 'image_select',
+                            'options'   => array(
+                                '6' => array('alt' => '2 Column',  'img' => ReduxFramework::$_url . 'assets/img/2-col-portfolio.png'),
+                                '4' => array('alt' => '3 Column',  'img' => ReduxFramework::$_url . 'assets/img/3-col-portfolio.png'),
+                                '3' => array('alt' => '4 Column',  'img' => ReduxFramework::$_url . 'assets/img/4-col-portfolio.png'),
+                            ),
+                            'default'   => '4'
+                        ),
+                        array( 
+                            'title'     => __( 'Display Filter', 'bootstrapwp' ),
+                            'subtitle'  => __( 'Select to enable/disable the portfolio filter.', 'bootstrapwp' ),
+                            'id'        => 'filter_switch',
+                            'default'   => true,
+                            'on'        => __( 'Enable', 'bootstrapwp' ),
+                            'off'       => __( 'Disable', 'bootstrapwp' ),
+                            'type'      => 'switch',
+                        ),
 
-                      array( 
-                          'title'     => __( 'Custom Powered By Text', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Add your own custom text/html for powered by region.', 'bootstrapwp' ),
-                          'id'        => 'custom_power',
-                          'default'   => 'Powered by <a href="https://bootstrapwp.com">BootstrapWP</a>',
-                          'type'      => 'editor',
-                      ),
-                  )
-              );
+                        array( 
+                            'title'     => __( 'Filter Button Size', 'bootstrapwp' ),
+                            'subtitle'  => __( 'Select the Bootstrap button size you want for the Filter.', 'bootstrapwp' ),
+                            'id'        => 'filter_size',
+                            'default'   => 'default',
+                            'type'      => 'select',
+                            'options'   => $btn_size,
+                            'required'  => array('filter_switch','equals','1')
+                        ),
 
-              //Social             
-              $this->sections[] = array(
-                  'icon'      => 'el-icon-torso',
-                  'title'     => __('Social', 'bootstrapwp'),
-                  'fields'    => array(
-                       array( 
-                          'title'     => __( 'Social Icons', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Arrange your social icons. Add complete URLs to your social profiles.', 'bootstrapwp' ),
-                          'id'        => 'social_icons',
-                          'type'      => 'sortable',
-                          'options'   => $social_options,
-                      ),
-                  )
-              );
+                        array( 
+                            'title'     => __( 'Filter Button Color', 'bootstrapwp' ),
+                            'subtitle'  => __( 'Select the Bootstrap button color you want for the filter.', 'bootstrapwp' ),
+                            'id'        => 'filter_color',
+                            'default'   => 'default',
+                            'type'      => 'select',
+                            'options'   => $btn_color,
+                            'required'  => array('filter_switch','equals','1')
+                        ),
+                    )
+                );
 
-              //Homepage                  
-              $this->sections[] = array(
-                  'icon'      => 'el-icon-home',
-                  'title'     => __('Homepage', 'bootstrapwp'),
-                  //'subsection' => true,
-                  'fields'    => array(
-                      array(
-                          'id'        => 'homepage-layout',
-                          'type'      => 'sorter',
-                          'title'     => __('Homepage Layout Manager', 'bootstrapwp'),
-                          'desc'      => __('Organize how you want the layout to appear on the homepage', 'bootstrapwp'),
-                          'options'   => array(
-                              'enabled'   => array(
-                                  'herocontent'   => 'Hero Content',
-                                  'widgets'       => 'Widgets',
-                              ),
-                              'disabled'  => array(
-                                  'homecontent'   => 'Home Content',
-                                  'heropost'      => 'Hero Post',
-                                  
-                              ),
-                              
-                          ),
-                      ),
+                //Footer             
+                $this->sections[] = array(
+                    'icon'      => 'el-icon-photo',
+                    'title'     => __('Footer', 'bootstrapwp'),
+                    'fields'    => array(
+                        array( 
+                            'title'     => __( 'Custom Copyright', 'bootstrapwp' ),
+                            'subtitle'  => __( 'Add your own custom text/html for copyright region.', 'bootstrapwp' ),
+                            'id'        => 'custom_copyright',
+                            'default'   => '&copy; Copyright 2014 - <a href="https://bootstrapwp.com">BootstrapWP.com</a>',
+                            'type'      => 'editor',
+                        ),
 
-                      array(  
-                          'title'     => __('Featured Heading', 'bootstrap'),
-                          'subtitle'  => __('This is the heading of the featured content.', 'bootstrap'),
-                          'id'        => 'featured_heading',
-                          'default'   => 'Responsive!',
-                          'type'      => 'text',
-                      ),
+                        array( 
+                            'title'     => __( 'Custom Powered By Text', 'bootstrapwp' ),
+                            'subtitle'  => __( 'Add your own custom text/html for powered by region.', 'bootstrapwp' ),
+                            'id'        => 'custom_power',
+                            'default'   => 'Powered by <a href="https://bootstrapwp.com">BootstrapWP</a>',
+                            'type'      => 'editor',
+                        ),
+                    )
+                );
 
-                      array(  
-                          'title'     => __('Featured Content', 'bootstrap'),
-                          'subtitle'  => __('This is the content of the Hero Content module.', 'bootstrap'),
-                          'id'        => 'featured_content',
-                          'default'   => 'A responsive WordPress theme with all the Bootstrap goodies. Check out the page layouts, features, and shortcodes this theme has to offer. Feel free to look around.',
-                          'type'      => 'textarea',
-                      ),
+                //Social             
+                $this->sections[] = array(
+                    'icon'      => 'el-icon-torso',
+                    'title'     => __('Social', 'bootstrapwp'),
+                    'fields'    => array(
+                         array( 
+                            'title'     => __( 'Social Icons', 'bootstrapwp' ),
+                            'subtitle'  => __( 'Arrange your social icons. Add complete URLs to your social profiles.', 'bootstrapwp' ),
+                            'id'        => 'social_icons',
+                            'type'      => 'sortable',
+                            'options'   => $social_options,
+                        ),
+                    )
+                );
 
-                      array( 
-                          'title'     => __( 'Featured Button', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Enable/Disable featured button.', 'bootstrapwp' ),
-                          'id'        => 'featured_btn',
-                          'default'   => true,
-                          'on'        => __( 'Enable', 'bootstrapwp' ),
-                          'off'       => __( 'Disable', 'bootstrapwp' ),
-                          'type'      => 'switch',
-                      ),
+                //Homepage                  
+                $this->sections[] = array(
+                    'icon'      => 'el-icon-home',
+                    'title'     => __('Homepage', 'bootstrapwp'),
+                    //'subsection' => true,
+                    'fields'    => array(
+                        array(
+                            'id'        => 'homepage-layout',
+                            'type'      => 'sorter',
+                            'title'     => __('Homepage Layout Manager', 'bootstrapwp'),
+                            'desc'      => __('Organize how you want the layout to appear on the homepage', 'bootstrapwp'),
+                            'options'   => array(
+                                'enabled'   => array(
+                                    'herocontent'   => 'Hero Content',
+                                    'widgets'       => 'Widgets',
+                                ),
+                                'disabled'  => array(
+                                    'homecontent'   => 'Home Content',
+                                    'heropost'      => 'Hero Post',
+                                    
+                                ),
+                                
+                            ),
+                        ),
 
-                      array(  
-                          'title'     => __( 'Featured Button Text', 'bootstrapwp' ),
-                          'subtitle'  => __( 'This is the text that will replace Learn More.', 'bootstrapwp' ),
-                          'id'        => 'featured_btn_text',
-                          'default'   => 'Learn More',
-                          'type'      => 'text',
-                          'required'  => array('featured_btn','equals','1'),
-                      ),
+                        array(  
+                            'title'     => __('Featured Heading', 'bootstrap'),
+                            'subtitle'  => __('This is the heading of the featured content.', 'bootstrap'),
+                            'id'        => 'featured_heading',
+                            'default'   => 'Responsive!',
+                            'type'      => 'text',
+                        ),
 
-                      array(  
-                          'title'     => __( 'Featured Button URL', 'bootstrapwp' ),
-                          'subtitle'  => __( 'This is the URL for the button.', 'bootstrapwp' ),
-                          'id'        => 'featured_btn_url',
-                          'default'   => 'http://',
-                          'type'      => 'text',
-                          'required'  => array('featured_btn','equals','1'),
-                      ),
+                        array(  
+                            'title'     => __('Featured Content', 'bootstrap'),
+                            'subtitle'  => __('This is the content of the Hero Content module.', 'bootstrap'),
+                            'id'        => 'featured_content',
+                            'default'   => 'A responsive WordPress theme with all the Bootstrap goodies. Check out the page layouts, features, and shortcodes this theme has to offer. Feel free to look around.',
+                            'type'      => 'textarea',
+                        ),
 
-                      array( 
-                          'title'     => __( 'Make the Featured button Full Width - Block', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Enable/Disable full width button.', 'bootstrapwp' ),
-                          'id'        => 'featured_btn_block',
-                          'default'   => true,
-                          'on'        => __( 'Enable', 'bootstrapwp' ),
-                          'off'       => __( 'Disable', 'bootstrapwp' ),
-                          'type'      => 'switch',
-                          'required'  => array('featured_btn','equals','1'),
-                      ),
+                        array( 
+                            'title'     => __( 'Featured Button', 'bootstrapwp' ),
+                            'subtitle'  => __( 'Enable/Disable featured button.', 'bootstrapwp' ),
+                            'id'        => 'featured_btn',
+                            'default'   => true,
+                            'on'        => __( 'Enable', 'bootstrapwp' ),
+                            'off'       => __( 'Disable', 'bootstrapwp' ),
+                            'type'      => 'switch',
+                        ),
 
-                      array( 
-                          'title'     => __( 'Featured Button Size', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select the Bootstrap button size you want.', 'bootstrapwp' ),
-                          'id'        => 'featured_btn_size',
-                          'default'   => 'default',
-                          'type'      => 'select',
-                          'options'   => $btn_size,
-                          'required'  => array('featured_btn','equals','1'),
-                      ),
+                        array(  
+                            'title'     => __( 'Featured Button Text', 'bootstrapwp' ),
+                            'subtitle'  => __( 'This is the text that will replace Learn More.', 'bootstrapwp' ),
+                            'id'        => 'featured_btn_text',
+                            'default'   => 'Learn More',
+                            'type'      => 'text',
+                            'required'  => array('featured_btn','equals','1'),
+                        ),
 
-                      array( 
-                          'title'     => __( 'Featured Button Color', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Select the Bootstrap button color you want.', 'bootstrapwp' ),
-                          'id'        => 'featured_btn_color',
-                          'default'   => 'default',
-                          'type'      => 'select',
-                          'options'   => $btn_color,
-                          'required'  => array('featured_btn','equals','1'),
-                      ),
+                        array(  
+                            'title'     => __( 'Featured Button URL', 'bootstrapwp' ),
+                            'subtitle'  => __( 'This is the URL for the button.', 'bootstrapwp' ),
+                            'id'        => 'featured_btn_url',
+                            'default'   => 'http://',
+                            'type'      => 'text',
+                            'required'  => array('featured_btn','equals','1'),
+                        ),
 
-                      array( 
-                          'title'     => __( 'Right Featured Content', 'bootstrapwp' ),
-                          'subtitle'  => __( 'Add your image or text/html for right Featured content region.', 'bootstrapwp' ),
-                          'id'        => 'right_featured',
-                          'default'   => '',
-                          'type'      => 'editor',
-                      ),
+                        array( 
+                            'title'     => __( 'Make the Featured button Full Width - Block', 'bootstrapwp' ),
+                            'subtitle'  => __( 'Enable/Disable full width button.', 'bootstrapwp' ),
+                            'id'        => 'featured_btn_block',
+                            'default'   => true,
+                            'on'        => __( 'Enable', 'bootstrapwp' ),
+                            'off'       => __( 'Disable', 'bootstrapwp' ),
+                            'type'      => 'switch',
+                            'required'  => array('featured_btn','equals','1'),
+                        ),
 
-                  )
-              );
+                        array( 
+                            'title'     => __( 'Featured Button Size', 'bootstrapwp' ),
+                            'subtitle'  => __( 'Select the Bootstrap button size you want.', 'bootstrapwp' ),
+                            'id'        => 'featured_btn_size',
+                            'default'   => 'default',
+                            'type'      => 'select',
+                            'options'   => $btn_size,
+                            'required'  => array('featured_btn','equals','1'),
+                        ),
+
+                        array( 
+                            'title'     => __( 'Featured Button Color', 'bootstrapwp' ),
+                            'subtitle'  => __( 'Select the Bootstrap button color you want.', 'bootstrapwp' ),
+                            'id'        => 'featured_btn_color',
+                            'default'   => 'default',
+                            'type'      => 'select',
+                            'options'   => $btn_color,
+                            'required'  => array('featured_btn','equals','1'),
+                        ),
+
+                        array( 
+                            'title'     => __( 'Right Featured Content', 'bootstrapwp' ),
+                            'subtitle'  => __( 'Add your image or text/html for right Featured content region.', 'bootstrapwp' ),
+                            'id'        => 'right_featured',
+                            'default'   => '',
+                            'type'      => 'editor',
+                        ),
+
+                    )
+                );
+
+
+
                
 
                 if ( file_exists( trailingslashit( dirname( __FILE__ ) ) . 'README.html' ) ) {
                     $tabs['docs'] = array(
                         'icon'    => 'el-icon-book',
-                        'title'   => __( 'Documentation', 'diamondwp' ),
+                        'title'   => __( 'Documentation', 'bootstrapwp' ),
                         'content' => nl2br( file_get_contents( trailingslashit( dirname( __FILE__ ) ) . 'README.html' ) )
                     );
                 }
@@ -665,18 +668,18 @@
                 // Custom page help tabs, displayed using the help API. Tabs are shown in order of definition.
                 $this->args['help_tabs'][] = array(
                     'id'      => 'redux-help-tab-1',
-                    'title'   => __( 'Theme Information 1', 'diamondwp' ),
-                    'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'diamondwp' )
+                    'title'   => __( 'Theme Information 1', 'bootstrapwp' ),
+                    'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'bootstrapwp' )
                 );
 
                 $this->args['help_tabs'][] = array(
                     'id'      => 'redux-help-tab-2',
-                    'title'   => __( 'Theme Information 2', 'diamondwp' ),
-                    'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'diamondwp' )
+                    'title'   => __( 'Theme Information 2', 'bootstrapwp' ),
+                    'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'bootstrapwp' )
                 );
 
                 // Set the help sidebar
-                $this->args['help_sidebar'] = __( '<p>This is the sidebar content, HTML is allowed.</p>', 'diamondwp' );
+                $this->args['help_sidebar'] = __( '<p>This is the sidebar content, HTML is allowed.</p>', 'bootstrapwp' );
             }
 
             /**
@@ -689,7 +692,7 @@
 
                 $this->args = array(
                     // TYPICAL -> Change these values as you need/desire
-                    'opt_name'             => 'dwp_options',
+                    'opt_name'             => 'bswp_options',
                     // This is where your data is stored in the database and also becomes your global variable name.
                     'display_name'         => $theme->get( 'Name' ),
                     // Name that appears at the top of your panel
@@ -699,8 +702,8 @@
                     //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
                     'allow_sub_menu'       => true,
                     // Show the sections below the admin menu item or not
-                    'menu_title'           => __( 'Sample Options', 'diamondwp' ),
-                    'page_title'           => __( 'Sample Options', 'diamondwp' ),
+                    'menu_title'           => __( 'Sample Options', 'bootstrapwp' ),
+                    'page_title'           => __( 'Sample Options', 'bootstrapwp' ),
                     // You will need to generate a Google API key to use this feature.
                     // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
                     'google_api_key'       => '',
@@ -800,19 +803,19 @@
                 $this->args['admin_bar_links'][] = array(
                     'id'    => 'redux-docs',
                     'href'   => 'http://docs.reduxframework.com/',
-                    'title' => __( 'Documentation', 'diamondwp' ),
+                    'title' => __( 'Documentation', 'bootstrapwp' ),
                 );
 
                 $this->args['admin_bar_links'][] = array(
                     //'id'    => 'redux-support',
                     'href'   => 'https://github.com/ReduxFramework/redux-framework/issues',
-                    'title' => __( 'Support', 'diamondwp' ),
+                    'title' => __( 'Support', 'bootstrapwp' ),
                 );
 
                 $this->args['admin_bar_links'][] = array(
                     'id'    => 'redux-extensions',
                     'href'   => 'reduxframework.com/extensions',
-                    'title' => __( 'Extensions', 'diamondwp' ),
+                    'title' => __( 'Extensions', 'bootstrapwp' ),
                 );
 
                 // SOCIAL ICONS -> Setup custom links in the footer for quick links in your panel footer icons.
@@ -845,13 +848,13 @@
                     } else {
                         $v = str_replace( '-', '_', $this->args['opt_name'] );
                     }
-                    $this->args['intro_text'] = sprintf( __( '<p></p>', 'diamondwp' ), $v );
+                    $this->args['intro_text'] = sprintf( __( '<p></p>', 'bootstrapwp' ), $v );
                 } else {
-                    $this->args['intro_text'] = __( '<p></p>', 'diamondwp' );
+                    $this->args['intro_text'] = __( '<p></p>', 'bootstrapwp' );
                 }
 
                 // Add content after the form.
-                $this->args['footer_text'] = __( '<p></p>', 'diamondwp' );
+                $this->args['footer_text'] = __( '<p></p>', 'bootstrapwp' );
             }
 
             public function validate_callback_function( $field, $value, $existing_value ) {
